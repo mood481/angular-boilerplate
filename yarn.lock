@@ -1468,6 +1468,11 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
+"@macto/ngx-simple-logger@^0.1.0-alpha":
+  version "0.1.0-alpha"
+  resolved "https://registry.yarnpkg.com/@macto/ngx-simple-logger/-/ngx-simple-logger-0.1.0-alpha.tgz#ea4d892b55025c49a3f12d4b52ed2c9053b91d61"
+  integrity sha512-QNGUb1JkUPOScvJzm4kEQRVOBA/gMrkzZvIUU/2ds0U6WAjIkEXMopXkHn7x+u+++hREcFJj/s532x47kv8vUw==
+
 "@ngtools/webpack@12.0.4":
   version "12.0.4"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-12.0.4.tgz#4c2cc2f19040e902582cadf092ce0743393f83a8"
