@@ -1,0 +1,6 @@
+{
+    "home": {
+        "hello": "Hola!",
+        "helloWithVars": "Hola {{name}}"
+    }
+}
