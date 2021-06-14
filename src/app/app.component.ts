@@ -1,17 +1,17 @@
 import { Component } from "@angular/core";
 
 import { LoggerService } from "@abo/core/services/logger.service";
+import { BaseComponent } from "@abo/common/base/base.component";
 
 @Component({
     selector: "app-root",
     templateUrl: "./app.component.html",
     styleUrls: ["./app.component.scss"]
 })
-export class AppComponent
+export class AppComponent extends BaseComponent
 {
-    public name = "AppComponent";
-
-    public constructor(private log: LoggerService) {
-        log.debug("Init LoggerService")
+    public constructor(logger: LoggerService) {
+        super(logger);
+        this.log.debug("initialized")
     }
 }

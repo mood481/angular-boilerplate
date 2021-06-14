@@ -29,7 +29,7 @@ chrome-profiler-events*.json
 .history/*
 
 # misc
-_tmp
+/_tmp
 /.sass-cache
 /connect.lock
 /coverage

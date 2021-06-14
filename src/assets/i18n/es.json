@@ -2,5 +2,9 @@
     "home": {
         "hello": "Hola!",
         "helloWithVars": "Hola {{name}}"
+    },
+    "menu": {
+        "dashboard": "Panel",
+        "elements": "Elementos"
     }
 }
