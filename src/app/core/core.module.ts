@@ -13,6 +13,7 @@ import { environment } from "@abo/environments/environment";
 import { LoggerService } from "./services/logger.service";
 import { TranslateHttpLoader } from "@abo/core/services/translate-http.loader";
 import { AppConstants } from "@abo/app.constants";
+import { SdkMockService } from "@abo/core/services/sdk-mock.service";
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { AppConstants } from "@abo/app.constants";
         SimpleLoggerModule.forRoot({
             level: !environment.production ? SimpleLogLevel.DEBUG : SimpleLogLevel.ERROR
         }),
-        TranslocoModule
+        TranslocoModule,
     ],
     exports: [
         BrowserModule,

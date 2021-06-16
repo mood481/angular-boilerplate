@@ -2,7 +2,8 @@
 
     <p>Angular boilerplate is running!</p>
 
-    <p>{{ tr("home.hello") }}</p>
-    <p>{{ tr("home.helloWithVars", { name: name }) }}</p>
+    <p>{{ tr("home.hello") }} ... {{ tr("home.helloWithVars", { name: name }) }}</p>
+
+    <p><a [routerLink]="'/login'">Login</a> </p>
 
 </div>

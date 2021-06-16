@@ -14,8 +14,6 @@ import { AppConstants } from "@abo/app.constants";
 })
 export class ElementsListComponent extends BaseListComponent<ElementModel>
 {
-    public editPattern = AppConstants.Routing.Parts.EDIT;
-
     constructor(logger: LoggerService,
                 protected router: Router
     ) {

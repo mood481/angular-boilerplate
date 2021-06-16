@@ -10,8 +10,10 @@ import { BaseComponent } from "@abo/common/base/base.component";
 })
 export class AppComponent extends BaseComponent
 {
+    public name = "AppComponent";
+
     public constructor(logger: LoggerService) {
         super(logger);
-        this.log.debug("initialized")
+        this.log.debug("initialized");
     }
 }
