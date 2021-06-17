@@ -1,0 +1,10 @@
+{
+    "home": {
+        "hello": "Hello!",
+        "helloWithVars": "Hello {{name}}"
+    },
+    "menu": {
+        "dashboard": "Dashboard",
+        "elements": "Elements"
+    }
+}

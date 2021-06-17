@@ -21,9 +21,10 @@
             "rules": {
                 "quotes": [ "error", "double" ],
                 "indent": [ "warn", 4 ],
+                "semi": ["error", "always"],
+                "@angular-eslint/no-empty-lifecycle-method": "off",
                 "@angular-eslint/directive-selector": [
-                    "error",
-                    {
+                    "error",  {
                         "type": "attribute",
                         "prefix": "app",
                         "style": "camelCase"
