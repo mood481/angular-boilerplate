@@ -6,16 +6,16 @@ import { AuthGuard } from "@abo/core/auth/auth.guard";
 
 export const routes: Routes = [
     {
-        path: "",
+        path:  AppConstants.Routing.BASE_PRIVATE,
         component: MainLayoutComponent,
         children: [
             {
-                path: AppConstants.Routing.BASE_PRIVATE + "/dashboard",
+                path: "dashboard",
                 canLoad: [AuthGuard],
                 loadChildren: () => import("./private/dashboard/dashboard.module").then(mod => mod.DashboardModule)
             },
             {
-                path: AppConstants.Routing.BASE_PRIVATE + "/elements",
+                path: "elements",
                 canLoad: [AuthGuard],
                 loadChildren: () => import("./private/elements/elements.module").then(mod => mod.ElementsModule)
             }

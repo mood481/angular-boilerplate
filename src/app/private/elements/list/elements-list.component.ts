@@ -27,7 +27,7 @@ export class ElementsListComponent extends BaseListComponent<ElementModel>
             { prop: "name", key: "list.name" },
             { prop: "desc", key: "list.desc" },
             { prop: "status", key: "list.status" }
-        ]
+        ];
     }
 
     protected fetchData(page: number): Observable<Array<ElementModel>> {
@@ -36,6 +36,6 @@ export class ElementsListComponent extends BaseListComponent<ElementModel>
                 { id: 1, name: "Element 1", desc: "Desc 1", count: 1 },
                 { id: 2, name: "Element 2", desc: "Desc 2", count: 100 }
             ]
-        )
+        );
     }
 }

@@ -15,7 +15,7 @@ export class AppConstants
             VIEW: "details",
             EDIT: "edit/:id"
         }
-    }
+    };
 
     public static readonly APP_PAGES = [
         { key: "home", url: "/home" },

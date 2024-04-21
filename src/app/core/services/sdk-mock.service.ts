@@ -17,7 +17,7 @@ export class SdkMockService
         return of({
             data: {
                 email: "test@abo",
-                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBhYm8iLCJuYW1lIjoiVGVzdCIsInJvbGUiOjEsImlhdCI6MTYwMDAwMDAwMCwiZXhwIjoxNzAwMDAwMDAwfQ.pbBA5ePVajhGtXwTtTxvPhIYLrlB2cVmC_2EyQVKQcg",
+                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBhYm8iLCJuYW1lIjoiVGVzdCIsInJvbGUiOjEsImlhdCI6MTYwMDAwMDAwMCwiZXhwIjoxODkzNDUyNDAxfQ.Y_lbuHFG5TzSJ5XVeR2DZSqYnPSaiahYmUeDc9hgORk",
                 name: "Test"
             },
             error: false
