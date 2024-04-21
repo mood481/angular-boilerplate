@@ -1,17 +1,17 @@
 import {Injectable} from "@angular/core";
-import {CanLoad} from "@angular/router";
+
 
 import {AppAuthService} from "./auth.service";
 import {LoggerService} from "@abo/core/services/logger.service";
 
 @Injectable({providedIn: "root"})
-export class AuthGuard implements CanLoad
+export class AuthGuard
 {
     public constructor(private authSrv: AppAuthService,
                        private log: LoggerService) {
     }
 
-    public canLoad(): boolean {
+    public canMatch(): boolean {
         const isLogged = this.authSrv.isLoggedIn();
 
         if (isLogged) {

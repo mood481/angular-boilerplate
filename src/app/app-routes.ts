@@ -1,4 +1,4 @@
-import { Routes } from "@angular/router";
+import { mapToCanMatch, Routes } from "@angular/router";
 
 import { MainLayoutComponent } from "@abo/common/layouts/main-layout.component";
 import { AppConstants } from "@abo/app.constants";
@@ -11,12 +11,12 @@ export const routes: Routes = [
         children: [
             {
                 path: "dashboard",
-                canLoad: [AuthGuard],
+                canMatch: mapToCanMatch([AuthGuard]),
                 loadChildren: () => import("./private/dashboard/dashboard.module").then(mod => mod.DashboardModule)
             },
             {
                 path: "elements",
-                canLoad: [AuthGuard],
+                canMatch: mapToCanMatch([AuthGuard]),
                 loadChildren: () => import("./private/elements/elements.module").then(mod => mod.ElementsModule)
             }
         ]
