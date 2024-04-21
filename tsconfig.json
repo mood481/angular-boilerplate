@@ -14,7 +14,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
+    "target": "ES2022",
     "module": "es2020",
     "lib": [
       "es2018",
@@ -22,9 +22,14 @@
     ],
     "resolveJsonModule": true,
     "paths": {
-      "@abo/environments/*": ["src/environments/*"],
-      "@abo/*": ["src/app/*"]
-    }
+      "@abo/environments/*": [
+        "src/environments/*"
+      ],
+      "@abo/*": [
+        "src/app/*"
+      ]
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
