@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "m481-angular-boilerplate:build:production"
+              "buildTarget": "m481-angular-boilerplate:build:production"
             },
             "development": {
-              "browserTarget": "m481-angular-boilerplate:build:development"
+              "buildTarget": "m481-angular-boilerplate:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "m481-angular-boilerplate:build"
+            "buildTarget": "m481-angular-boilerplate:build"
           }
         },
         "lint": {

@@ -4,8 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import localeEs from "@angular/common/locales/es";
 import {SimpleLoggerModule, SimpleLogLevel} from "@macto/ngx-simple-logger";
-import { TRANSLOCO_CONFIG, TRANSLOCO_LOADER, TranslocoConfig,
-    TranslocoModule, TranslocoService } from "@ngneat/transloco";
+import { provideTransloco, TranslocoModule, TranslocoService } from "@jsverse/transloco";
 
 registerLocaleData(localeEs);
 
@@ -34,19 +33,15 @@ import { SdkMockService } from "@abo/core/services/sdk-mock.service";
         TranslocoModule
     ],
     providers: [
-        {
-            provide: TRANSLOCO_CONFIG,
-            useValue: {
+        provideTransloco({
+            config: {
                 availableLangs: AppConstants.LANGS,
                 defaultLang: environment.defaultLang || AppConstants.DEFAULT_LANG,
-                fallbackLang: environment.defaultLang || AppConstants.DEFAULT_LANG,
-                prodMode: environment.production,
-                flatten: {
-                    aot: environment.production
-                }
-            } as TranslocoConfig
-        },
-        {provide: TRANSLOCO_LOADER, useClass: TranslateHttpLoader},
+                reRenderOnLangChange: false,
+                prodMode: environment.production
+            },
+            loader: TranslateHttpLoader
+        }),
         LoggerService
     ]
 })

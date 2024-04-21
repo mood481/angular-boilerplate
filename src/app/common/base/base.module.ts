@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {TranslocoModule} from "@ngneat/transloco";
+import {TranslocoModule} from "@jsverse/transloco";
 
 import {BaseListComponent} from "./base-list.component";
 import {BaseFormComponent} from "./base-form.component";
