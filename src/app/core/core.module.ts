@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule, registerLocaleData } from "@angular/common";
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import localeEs from "@angular/common/locales/es";
 import {SimpleLoggerModule, SimpleLogLevel} from "@macto/ngx-simple-logger";
@@ -12,24 +12,21 @@ import { environment } from "@abo/environments/environment";
 import { LoggerService } from "./services/logger.service";
 import { TranslateHttpLoader } from "@abo/core/services/translate-http.loader";
 import { AppConstants } from "@abo/app.constants";
-import { SdkMockService } from "@abo/core/services/sdk-mock.service";
 
 
 @NgModule({
     declarations: [],
-    imports: [
-        BrowserModule,
-        CommonModule,
-        HttpClientModule,
-        SimpleLoggerModule.forRoot({
-            level: !environment.production ? SimpleLogLevel.DEBUG : SimpleLogLevel.ERROR
-        }),
-        TranslocoModule,
-    ],
     exports: [
         BrowserModule,
         CommonModule,
-        HttpClientModule,
+        TranslocoModule
+    ],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        SimpleLoggerModule.forRoot({
+            level: !environment.production ? SimpleLogLevel.DEBUG : SimpleLogLevel.ERROR
+        }),
         TranslocoModule
     ],
     providers: [
@@ -42,7 +39,8 @@ import { SdkMockService } from "@abo/core/services/sdk-mock.service";
             },
             loader: TranslateHttpLoader
         }),
-        LoggerService
+        LoggerService,
+        provideHttpClient(withInterceptorsFromDi())
     ]
 })
 export class CoreModule
