@@ -29,6 +29,7 @@ chrome-profiler-events*.json
 .history/*
 
 # misc
+/.angular/cache
 /_tmp
 /.sass-cache
 /connect.lock
@@ -38,6 +39,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+
+.nx/cache
 
 # System Files
 .DS_Store

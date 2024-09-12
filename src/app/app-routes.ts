@@ -1,4 +1,4 @@
-import { Routes } from "@angular/router";
+import { mapToCanMatch, Routes } from "@angular/router";
 
 import { MainLayoutComponent } from "@abo/common/layouts/main-layout.component";
 import { AppConstants } from "@abo/app.constants";
@@ -6,17 +6,17 @@ import { AuthGuard } from "@abo/core/auth/auth.guard";
 
 export const routes: Routes = [
     {
-        path: "",
+        path:  AppConstants.Routing.BASE_PRIVATE,
         component: MainLayoutComponent,
         children: [
             {
-                path: AppConstants.Routing.BASE_PRIVATE + "/dashboard",
-                canLoad: [AuthGuard],
+                path: "dashboard",
+                canMatch: mapToCanMatch([AuthGuard]),
                 loadChildren: () => import("./private/dashboard/dashboard.module").then(mod => mod.DashboardModule)
             },
             {
-                path: AppConstants.Routing.BASE_PRIVATE + "/elements",
-                canLoad: [AuthGuard],
+                path: "elements",
+                canMatch: mapToCanMatch([AuthGuard]),
                 loadChildren: () => import("./private/elements/elements.module").then(mod => mod.ElementsModule)
             }
         ]

@@ -5,6 +5,7 @@
             <li><a [routerLink]="'/abo/elements'">{{ tr("menu.elements")}}</a></li>
         </ul>
     </nav>
+    <p><a class="logout" (click)="doLogout()">Logout</a></p>
 </div>
 <ng-container>
     <router-outlet id="main-content"></router-outlet>

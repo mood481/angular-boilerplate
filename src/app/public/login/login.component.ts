@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { LoggerService } from "@abo/core/services/logger.service";
@@ -16,13 +16,13 @@ import { catchError, finalize, take, tap } from "rxjs/operators";
 export class LoginComponent extends BaseComponent implements OnInit
 {
     public isPageLoading = true;
-    public loginForm: FormGroup;
+    public loginForm: UntypedFormGroup;
     public isLoading = false;
     public isError = false;
 
     constructor(logger: LoggerService,
                 private router: Router,
-                private formBuilder: FormBuilder,
+                private formBuilder: UntypedFormBuilder,
                 private authService: AppAuthService) {
         super(logger);
     }

@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 
 import {BasePageComponent} from "./base-page.component";
 import {LoggerService} from "@abo/core/services/logger.service";
@@ -12,7 +12,7 @@ import {LoggerService} from "@abo/core/services/logger.service";
 export class BaseFormComponent<T> extends BasePageComponent implements OnDestroy
 {
     public theModel: T;
-    public theForm: FormGroup = null as unknown as FormGroup;
+    public theForm: UntypedFormGroup = null as unknown as UntypedFormGroup;
 
     public state = {
         isLoading: false
